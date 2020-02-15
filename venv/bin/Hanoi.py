@@ -1,14 +1,14 @@
-def Hanoi(n, x, y):
-    if n > 0:
-        Hanoi(n-1, x, y)
-        print(n, x, 2)
-        Hanoi(n-1, y, x)
-        print(n, 2, y)
-        Hanoi(n - 1, y, x)
-        Hanoi(n - 1, x, y)
-    return n, x, y
+def HanoiMove(numrings, b, c):
+    if numrings > 0:
+        HanoiMove(numrings-1, b, c)
+        print(f"move disk {numrings} to the pole {b}, {2}")
+        HanoiMove(numrings-1, c, b)
+        print(f"move disk {numrings} to the pole {2}, {c}")
+        HanoiMove(numrings - 1, b, c)
+        HanoiMove(numrings - 1, c, b)
 
-n = int(input())
-x = 1
-y = 3
-Hanoi(n, x, y)
+numrings = int(input())
+b = 1
+c = 3
+
+HanoiMove(numrings, b, c)
