@@ -687,7 +687,6 @@ def SumDigit(n):
 res = SumDigit(a)
 print(res)
 
-
 # фибоначчи рекурсия
 # def Fib(n):
 #     if n <= 1:
